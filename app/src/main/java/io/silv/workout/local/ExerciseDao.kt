@@ -18,4 +18,6 @@ interface ExerciseDao {
     @Delete
     suspend fun delete(exerciseEntity: ExerciseEntity)
 
+    @Query("DELETE FROM history WHERE id = :id")
+    suspend fun deleteById(id: Int)
 }

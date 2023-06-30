@@ -30,7 +30,9 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>() {
         }
 
         binding.flHistory.setOnClickListener {
-
+            navController.navigate(
+                HomeFragmentDirections.actionHomeFragmentToHistoryFragment()
+            )
         }
     }
 }

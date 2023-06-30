@@ -3,7 +3,6 @@ package io.silv.workout.ui.fragments
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -12,7 +11,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import io.silv.workout.databinding.FragmentBmiBinding
 import io.silv.workout.ui.util.BaseFragment
 import io.silv.workout.ui.viewmodels.BmiViewModel
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import java.math.BigDecimal
 import java.math.RoundingMode

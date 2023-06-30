@@ -34,6 +34,19 @@ object ViewModelBmiModule {
 
 @Module
 @InstallIn(ViewModelComponent::class)
+object ViewModelHistoryModule {
+
+    @Provides
+    @ViewModelScoped
+    fun provideHistoryViewModel(
+        exerciseDao: ExerciseDao
+    ) = HistoryViewModel(
+        exerciseDao = exerciseDao
+    )
+}
+
+@Module
+@InstallIn(ViewModelComponent::class)
 object ViewModelFinishModule {
 
     @Provides
