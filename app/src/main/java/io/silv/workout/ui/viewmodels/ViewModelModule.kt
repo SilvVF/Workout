@@ -7,6 +7,8 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.scopes.ViewModelScoped
 import io.silv.workout.local.ExerciseDao
+import io.silv.workout.usecase.CalculateBmiUSUseCase
+import io.silv.workout.usecase.CalculateBmiUseCase
 
 
 @Module
@@ -18,7 +20,17 @@ object ViewModelExerciseModule {
     fun provideExerciseViewModel(handle: SavedStateHandle) = ExerciseViewModel(handle)
 }
 
+@Module
+@InstallIn(ViewModelComponent::class)
+object ViewModelBmiModule {
 
+    @Provides
+    @ViewModelScoped
+    fun provideBmiViewModel() = BmiViewModel(
+        bmiUseCase = CalculateBmiUseCase(),
+        bmiUSUseCase = CalculateBmiUSUseCase()
+    )
+}
 
 @Module
 @InstallIn(ViewModelComponent::class)
