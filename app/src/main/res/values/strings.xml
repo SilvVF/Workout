@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Workout</string>
+    <string name="height_cm">height cm</string>
+    <string name="weight_lb">Weight (lb)</string>
+    <string name="height_ft">Height (Ft)</string>
+    <string name="weight_kg">Weight (Kg)</string>
 </resources>

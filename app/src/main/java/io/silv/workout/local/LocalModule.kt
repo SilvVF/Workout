@@ -14,11 +14,11 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object LocalModule {
 
-    @Singleton
     @Provides
+    @Singleton
     fun provideAppDatabase(
         @ApplicationContext context: Context
-    ): RoomDatabase {
+    ): ExerciseDatabase {
         return Room.databaseBuilder(
             context,
             ExerciseDatabase::class.java,
@@ -28,5 +28,9 @@ object LocalModule {
             .build()
     }
 
-
+    @Provides
+    @Singleton
+    fun provideExerciseDao(
+        db: ExerciseDatabase
+    ): ExerciseDao = db.exerciseDao()
 }

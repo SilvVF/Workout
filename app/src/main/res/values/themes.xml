@@ -3,7 +3,19 @@
     <style name="Base.Theme.Workout" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:navigationBarColor">
+            @android:color/transparent
+        </item>
+
+        <!-- Optional: set to transparent if your app is drawing behind the status bar. -->
+        <item name="android:statusBarColor">
+            @android:color/transparent
+        </item>
     </style>
 
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="colorControlNormal">@color/toolbar_color_control_normal</item>
+    </style>
+    <color name="toolbar_color_control_normal">#000000</color>
     <style name="Theme.Workout" parent="Base.Theme.Workout" />
 </resources>
